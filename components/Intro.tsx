@@ -42,6 +42,7 @@ export default function Intro() {
           </motion.span>
         </div>
       </div>
+      <p>I am a Software Engineer Dev</p>
     </section>
   )
 }
