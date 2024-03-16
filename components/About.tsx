@@ -16,7 +16,7 @@ export default function About() {
     >
       <SectionHeading>About Me</SectionHeading>
       <p
-        className="mb-3"
+        className="mb-3 font-customRobot"
       >
         After graduating with a degree in{" "}
         <span className="font-medium">Accounting</span>, I decided to pursue my
@@ -34,7 +34,7 @@ export default function About() {
         <span className="font-medium">full-time position</span> as a software
         developer.
       </p>
-      <p>
+      <p className="font-customRobot">
         <span className="italic">When I'm not coding</span>, I enjoy playing
         video games, watching movies, and playing with my dog. I also enjoy{" "}
         <span className="font-medium">learning new things</span>. I am currently

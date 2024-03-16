@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: ;
-  src: url();
+  font-family: 'CustomFontValue';
+  src: url('/fonts/MongoDBValueSerif-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CustomRobot';
+  src: url('/fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CustomPop';
+  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
 }
