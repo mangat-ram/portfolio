@@ -16,3 +16,7 @@
   font-family: 'CustomPop';
   src: url('/fonts/Poppins-Regular.ttf') format('truetype');
 }
+
+html {
+  --line-color:#e5e7eb
+}
