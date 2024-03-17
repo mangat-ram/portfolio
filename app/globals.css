@@ -20,3 +20,7 @@
 html {
   --line-color:#e5e7eb
 }
+
+.borderBlack {
+  @apply border border-black/10;
+}
