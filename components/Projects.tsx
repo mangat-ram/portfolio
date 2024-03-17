@@ -15,7 +15,7 @@ export default function Projects() {
 
   return (
     <section
-      className="scroll-mt-28"
+      className="scroll-mt-28 mb-28"
       id="projects"
       ref={ref}
     >
