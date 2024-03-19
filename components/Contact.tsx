@@ -23,10 +23,10 @@ export default function Contact() {
     >
       <SectionHeading>Contact</SectionHeading>
       <p 
-        className="text-gray-700 font-customPop"
+        className="text-gray-700 font-customPop dark:text-white/80"
       >Please Contact me directly at <a className="underline" href="mailto:se.mangat.ram@gmail.com">se.mangat.ram@gmail.com</a> or through this form.</p>
       <form 
-        className="mt-10 flex flex-col font-customPop"
+        className="mt-10 flex flex-col font-customPop dark:text-black"
         action={async (formData) => {
           console.log("Running on Client.");
           console.log(formData.get("senderEmail"));
@@ -36,7 +36,7 @@ export default function Contact() {
         }}
       >
           <input 
-          className="h-14 px-4 rounded-lg borderBlack"
+          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           type="email" 
           name="senderEmail"
           placeholder="Your email"
@@ -44,7 +44,7 @@ export default function Contact() {
           maxLength={500}
           />
           <textarea 
-            className="h-52 my-3 rounded-lg borderBlack p-4"
+            className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
             placeholder="Your message"
             name="message"
             required
@@ -53,7 +53,7 @@ export default function Contact() {
           <button 
             type="submit"
             className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all
-            focus:scale-110 hover:scale-110 active:scale-105 hover:bg-gray-950"
+            focus:scale-110 hover:scale-110 active:scale-105 hover:bg-gray-950 dark:bg-white dark:bg-opacity-10"
           >
             Submit
             <FaPaperPlane

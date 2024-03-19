@@ -1,4 +1,6 @@
-import React,{useState,useEffect,createContext} from 'react'
+"use client";
+
+import React,{useState,useEffect,createContext, useContext} from 'react'
 type Theme = "light" | "dark";
 type ThemeContextProviderProps = {
   children: React.ReactNode,
@@ -53,4 +55,14 @@ export default function ThemeContextProvider(
   >
     {children}
   </ThemeContext.Provider>
+}
+
+export function useTheme() {
+  const context = useContext(ThemeContext)
+
+  if(context === null){
+    throw new Error("Use theme must be used within a theme provider.")
+  }
+
+  return context;
 }

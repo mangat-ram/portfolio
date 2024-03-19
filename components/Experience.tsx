@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react'
+import React, { useContext } from 'react'
 import SectionHeading from './SectionHeading'
 import {
   VerticalTimeline,
@@ -9,10 +9,12 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
+import { useTheme } from '@/context/ThemeContext';
 
 export default function Experience() {
 
   const { ref } = useSectionInView("Experience")
+  const { theme } = useTheme(); 
 
   return (
     <section
@@ -36,18 +38,21 @@ export default function Experience() {
                   padding:"1.3rem 2rem"
                 }}
                 contentArrowStyle={{
-                  borderRight: "0.4rem solid #9ca3af",
+                  borderRight: 
+                    theme === "light" 
+                    ? "0.4rem solid #9ca3af" 
+                    : "0.4rem solid rgba(255,255,255,0.5)",
                 }}
                 date={item.date}
                 icon={item.icon}
                 iconStyle={{
-                  background:"white",
+                  background:theme === "light" ? "white":"rgba(255,255,255,0.15)",
                   fontSize: "1.5rem"
                 }}
               >
                 <h3 className="font-semibold capitalize font-customPop">{item.title}</h3>
                 <p className="font-normal !mt-0 font-customPop">{item.location}</p>
-                <p className="!mt-1 !font-normal text-gray-700 font-customRobot">{item.description}</p>
+                <p className="!mt-1 !font-normal text-gray-700 font-customRobot dark:text-white/70">{item.description}</p>
               </VerticalTimelineElement>
             </React.Fragment>
           ))
