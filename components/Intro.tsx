@@ -3,7 +3,7 @@
 import React from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { BsArrowRight, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import Link from "next/link";
 import { FaGithubSquare } from "react-icons/fa";
@@ -107,6 +107,12 @@ export default function Intro() {
           className="bg-white px-4 py-4 text-gray-700 flex items-center gap-2 rounded-full text-[1.35rem] focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 hover:text-gray-950 dark:bg-white/10 dark:text-white/60"
         >
           <FaGithubSquare />
+        </a>
+        <a 
+          href=""
+          className="bg-white px-4 py-4 text-gray-700 flex items-center gap-2 rounded-full text-[1.35rem] focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 hover:text-gray-950 dark:bg-white/10 dark:text-white/60"
+        >
+          <BsTwitterX />
         </a>
       </motion.div>
     </section>
